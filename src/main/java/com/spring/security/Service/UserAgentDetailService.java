@@ -27,7 +27,7 @@ public class UserAgentDetailService implements UserDetailsService {
         }
 
         return User.builder()
-                .username(entity.getUserName())
+                .username(String.join("|",entity.getUserId(),entity.getUserName()))
                 .password(entity.getUserPassword())
                 .roles(entity.getRoll())
                 .build();

@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.formLogin;
 import static org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers.authenticated;
@@ -28,6 +29,9 @@ public class FormLoginTest {
 
 
     @Test
+    @Transactional
+    // 전체 테스트 시에는 UserId가 Unique 제약조건에 걸리게 되어 에러가 발생한다.
+    // 이에 @Transactional 을 이용하여 테스트가 끝나면 다시 원복시키게끔 한다.
     void formLoginTest() throws Exception {
 
         UserAgentEntity entity = new UserAgentEntity();
@@ -45,6 +49,7 @@ public class FormLoginTest {
                 .andExpect(authenticated());
     }
     @Test
+    @Transactional
     void formLoginERRORTest() throws Exception {
 
         UserAgentEntity entity = new UserAgentEntity();

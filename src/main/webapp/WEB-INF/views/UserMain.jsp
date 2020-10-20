@@ -10,15 +10,15 @@
 
 <html>
 <head>
-    <title>HELLO WELCOME. ADMIN PAGE</title>
+    <title>HELLO WELCOME. USER PAGE</title>
 </head>
 <body>
     <div>
-        <span>ADMIN_ID : </span>
+        <span>USER_ID : </span>
         <span>${userId}</span>
     </div>
     <div>
-        <span>ADMIN_NAME : </span>
+        <span>USER_NAME : </span>
         <span>${userName}</span>
     </div>
 </body>

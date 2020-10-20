@@ -13,6 +13,7 @@ public class UserAgentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
+    @Column(unique = true)
     private String userId;
 
     private String userName;
