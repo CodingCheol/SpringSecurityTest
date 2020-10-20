@@ -1,0 +1,12 @@
+spring:
+  security:
+    user:
+      name: userTest
+      password: userTest
+      roles: ADMIN
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+

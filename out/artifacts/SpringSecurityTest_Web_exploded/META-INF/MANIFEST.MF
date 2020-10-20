@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: security
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: wcjeong
+Implementation-Vendor-Id: com.spring
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_241
+Main-Class: ${start-class}
+
